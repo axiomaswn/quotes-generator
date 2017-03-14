@@ -1,9 +1,16 @@
 var Quotes = require("../models/quotes");
 
 module.exports = {
+
   list: function(req, res, next){
     Quotes.find({}).then(function(quotes){
     res.json(quotes);
+    })
+  },
+
+  random: function(req, res, next){
+    Quotes.find({}).then(function(quotes){
+    res.render('index', quotes[Math.floor(Math.random()*quotes.length)]);
     })
   },
 
