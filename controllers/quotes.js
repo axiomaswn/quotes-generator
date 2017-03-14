@@ -25,7 +25,15 @@ module.exports = {
     .catch(function(err){
       res.json('silahkan isi data dengan lengkap')
     })
-  }
+  },
+
+  // seed: function(req, res, next){
+  //   Quotes.insertMany({
+  //
+  //   }).then(function(quotes){
+  //   res.render('index', quotes[Math.floor(Math.random()*quotes.length)]);
+  //   })
+  // },
 
 
 }
